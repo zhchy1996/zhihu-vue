@@ -1,4 +1,5 @@
 # zhihu-vue
+<<<<<<< HEAD
 
 > 基于vue的知乎日报web
 
@@ -19,3 +20,6 @@ npm run build --report
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+=======
+一个基于vue的知乎日报web
+>>>>>>> 7152e365eebd5cf1c02f096bc88c1cb619b1939c
