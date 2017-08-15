@@ -2,14 +2,17 @@
 <<<<<<< HEAD
 
 > 基于vue的知乎日报web
-
-## Build Setup
+* 数据为真实的知乎日报数据
+* 可以显示评论
+* 由于知乎日报的主题日报中有一些专题转移到了读读日报中，所以不能在此项目中显示
+* 在关于中有查看以前日报的方法
+## 运行方法
 
 ``` bash
-# install dependencies
+# 安装依赖
 npm install
 
-# serve with hot reload at localhost:8080
+# 运行服务器（端口号为localhost：8080）
 npm run dev
 
 # build for production with minification
@@ -19,7 +22,3 @@ npm run build
 npm run build --report
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-=======
-一个基于vue的知乎日报web
->>>>>>> 7152e365eebd5cf1c02f096bc88c1cb619b1939c
