@@ -11,7 +11,7 @@
           <p>{{item.title}}</p>
         </router-link>
       </div>
-      
+
       <h2>{{title}}</h2>
       <div class="stories today-stories">
         <router-link class="item today" :to="('news/' + item.id)" v-for="item in gridData.stories" :key="item.id" tag="div">
@@ -42,7 +42,7 @@ export default {
   },
   methods:{
     click:function (id) {
-      this.url = 'news/' + id; 
+      this.url = 'news/' + id;
     },
     showMore:function () {
       if(this.more.length == 13){
@@ -57,19 +57,19 @@ export default {
   },
   created:function () {
     var date = store.state.date;
-    var url = "/api/4/news/latest";
+    var url = "https://news-at.zhihu.com/api/4/news/latest";
     if(!isNaN(Number(date))){
       if(date === '' || date == store.state.today) {
-        url = "/api/4/news/latest";
+        url = "https://news-at.zhihu.com/api/4/news/latest";
       }else{
-        url = '/api/4/news/before/' + date;
-        
+        url = 'https://news-at.zhihu.com/api/4/news/before/' + date;
+
       }
     }
     var $self = this;
     this.$http.get(url).then(function (data) {
       $self.gridData = data.body;
-      
+
       if(data.url ==='/api/4/news/latest') {
         store.commit('setLastData', data.body)
         store.commit('setToday', Number(data.body.date) + 1)
@@ -107,7 +107,7 @@ export default {
     h1{
       text-align: center;
     }
-    .item{ 
+    .item{
       height: 100px;
       flex:1;
       flex-grow: 0;
@@ -159,7 +159,7 @@ export default {
       flex-shrink:0;
       padding:0 20px 0 20px;
       background:#fff;
-      margin:20px 10px 20px 10px; 
+      margin:20px 10px 20px 10px;
       text-align: center;
     }
     .item p{
@@ -177,6 +177,6 @@ export default {
       cursor: pointer;
     }
   }
-  
-  
+
+
 </style>
