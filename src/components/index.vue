@@ -57,12 +57,12 @@ export default {
   },
   created:function () {
     var date = store.state.date;
-    var url = "https://news-at.zhihu.com/api/4/news/latest";
+    var url = "/api/4/news/latest";
     if(!isNaN(Number(date))){
       if(date === '' || date == store.state.today) {
-        url = "https://news-at.zhihu.com/api/4/news/latest";
+        url = "/api/4/news/latest";
       }else{
-        url = 'https://news-at.zhihu.com/api/4/news/before/' + date;
+        url = '/api/4/news/before/' + date;
 
       }
     }
